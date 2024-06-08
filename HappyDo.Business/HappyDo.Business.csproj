@@ -7,12 +7,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FluentValidation" Version="11.7.1" />
+		<PackageReference Include="FluentValidation" Version="11.6.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
 	</ItemGroup>
 
+
 	<ItemGroup>
 		<ProjectReference Include="..\HappyDo.Domain\HappyDo.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Enums\" />
 	</ItemGroup>
 
 </Project>

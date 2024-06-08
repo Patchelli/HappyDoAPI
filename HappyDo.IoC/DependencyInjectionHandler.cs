@@ -2,7 +2,7 @@
 using HappyDo.Business.Interfaces.OthersContracts;
 using HappyDo.Business.Providers;
 using HappyDo.Infrastructure.ORM.Context;
-using HappyDo.Infrastructure.ORM.EntitiesMappings.UoW;
+using HappyDo.Infrastructure.ORM.UoW;
 using HappyDo.IoC.DependencyInjectionSettings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

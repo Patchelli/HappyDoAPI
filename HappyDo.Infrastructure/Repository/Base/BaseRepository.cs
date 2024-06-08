@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HappyDo.Infrastructure.ORM.Repository.Base
+namespace HappyDo.Infrastructure.Repository.Base
 {
 
     public abstract class BaseRepository<T> : IDisposable where T : class

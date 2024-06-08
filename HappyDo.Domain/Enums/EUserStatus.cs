@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HappyDo.Domain.Entities
+namespace HappyDo.Domain.Enums
 {
-    public class Mentored : User
+    public enum EUserStatus : ushort
     {
-        public decimal AccumulatedValue { get; set; }
+        Active = 1,
+        Inactive,
+        PreRegister
     }
+
 }

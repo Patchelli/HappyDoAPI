@@ -1,4 +1,6 @@
 ﻿using HappyDo.Domain.Entities.Categories;
+using HappyDo.Domain.Entities.UserRole;
+using HappyDo.Domain.Entities.UserScope;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HappyDo.Domain.Entities.Tasks
@@ -11,9 +13,8 @@ namespace HappyDo.Domain.Entities.Tasks
         public decimal Percentage { get; set; } 
         public decimal Value { get; set; } 
         public Category Category { get; set; }
-        // Relacionamento
-        public int UserId { get; set; } 
-        public virtual User User { get; set; } 
+        public Guid ApplicationUserId { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
     }
 
 }

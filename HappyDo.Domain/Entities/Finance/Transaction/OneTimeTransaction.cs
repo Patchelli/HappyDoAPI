@@ -4,8 +4,8 @@
     {
         public string Description { get; set; }
 
-        public OneTimeTransaction(string description, decimal amount)
-            : base(amount)
+        public OneTimeTransaction(string description, decimal amount,DateTime dateTime)
+            : base(amount,dateTime)
         {
             Description = description;
         }

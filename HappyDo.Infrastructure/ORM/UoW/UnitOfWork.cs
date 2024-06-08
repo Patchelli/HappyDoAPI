@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HappyDo.Infrastructure.ORM.EntitiesMappings.UoW
+namespace HappyDo.Infrastructure.ORM.UoW
 {
     public sealed class UnitOfWork : IUnitOfWork
     {
