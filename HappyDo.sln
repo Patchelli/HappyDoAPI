@@ -3,22 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDo.API", "HappyDo.API\HappyDo.API.csproj", "{1561C369-3A92-42A6-97A2-AA074366A248}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyDo.API", "HappyDo.API\HappyDo.API.csproj", "{1561C369-3A92-42A6-97A2-AA074366A248}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D53B2A06-B39F-4075-9B84-785166201268} = {D53B2A06-B39F-4075-9B84-785166201268}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDo.ApplicationService", "HappyDo.ApplicationService\HappyDo.ApplicationService.csproj", "{43917A45-8C7D-429E-816E-ABBED211892B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyDo.ApplicationService", "HappyDo.ApplicationService\HappyDo.ApplicationService.csproj", "{43917A45-8C7D-429E-816E-ABBED211892B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDo.Business", "HappyDo.Business\HappyDo.Business.csproj", "{7A7EFB36-87A0-47A3-9C85-05EBDD86C8EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyDo.Business", "HappyDo.Business\HappyDo.Business.csproj", "{7A7EFB36-87A0-47A3-9C85-05EBDD86C8EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDo.Domain", "HappyDo.Domain\HappyDo.Domain.csproj", "{63405C35-2CB1-410A-93F7-0D919680E29E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyDo.Domain", "HappyDo.Domain\HappyDo.Domain.csproj", "{63405C35-2CB1-410A-93F7-0D919680E29E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDo.Infrastructure", "HappyDo.Infrastructure\HappyDo.Infrastructure.csproj", "{5197A11C-75A6-49E7-890A-6BD8270881BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyDo.Infrastructure", "HappyDo.Infrastructure\HappyDo.Infrastructure.csproj", "{5197A11C-75A6-49E7-890A-6BD8270881BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDo.IoC", "HappyDo.IoC\HappyDo.IoC.csproj", "{D53B2A06-B39F-4075-9B84-785166201268}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyDo.IoC", "HappyDo.IoC\HappyDo.IoC.csproj", "{D53B2A06-B39F-4075-9B84-785166201268}"
+	ProjectSection(ProjectDependencies) = postProject
+		{43917A45-8C7D-429E-816E-ABBED211892B} = {43917A45-8C7D-429E-816E-ABBED211892B}
+		{5197A11C-75A6-49E7-890A-6BD8270881BD} = {5197A11C-75A6-49E7-890A-6BD8270881BD}
+		{7A7EFB36-87A0-47A3-9C85-05EBDD86C8EF} = {7A7EFB36-87A0-47A3-9C85-05EBDD86C8EF}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyDO.Tests", "HappyDO.Tests\HappyDO.Tests.csproj", "{214C184A-C8A7-4F32-800A-766D9C21A33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyDO.Tests", "HappyDO.Tests\HappyDO.Tests.csproj", "{214C184A-C8A7-4F32-800A-766D9C21A33C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
