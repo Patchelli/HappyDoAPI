@@ -4,14 +4,14 @@ namespace HappyDo.API.Settings
 {
     public static class SettingsHandler
     {
-        public static IServiceCollection AddSettingsHandler(this IServiceCollection services, IConfiguration configuration)
+        public static void AddSettingsConfigurations(this IServiceCollection services)
         {
-            return services.AddProviderOptionsHandler(configuration)
-                           .AddControllersConfiguration()
-                           .AddFiltersConfiguration()
-                           .AddSwaggerConfiguration()
-                           .AddCorsConfiguration();
+            services.AddControllersConfiguration();
+            services.AddCorsConfiguration();
+            services.AddFiltersConfiguration();
+            services.AddSwaggerConfiguration();
         }
     }
+
 
 }

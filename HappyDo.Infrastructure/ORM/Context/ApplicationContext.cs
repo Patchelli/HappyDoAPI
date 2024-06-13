@@ -1,6 +1,5 @@
 ﻿
 
-using HappyDo.Domain.Entities.UserRole;
 using HappyDo.Domain.Entities.UserScope;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;

@@ -13,9 +13,7 @@ namespace HappyDo.Business.Interfaces.RepositoryContracts
 {
     public interface IUserRepository : IDisposable
     {
-        Task<bool> SaveAsync(User user);
         Task<bool> UpdateAsync(User user);
-        Task<bool> UpdateDepartmentAsync(int userId, int? departmentId);
         Task<bool> HaveInTheDatabaseAsync(Expression<Func<User, bool>> predicate);
 
         Task<User?> FindByPredicateAsync(Expression<Func<User, bool>> predicate,
@@ -23,11 +21,10 @@ namespace HappyDo.Business.Interfaces.RepositoryContracts
                                          bool asNoTracking = false);
 
         Task<User?> FindByPredicateWithIncludeAsync(Expression<Func<User, bool>> predicate,
-        Func<IQueryable<User>, IIncludableQueryable<User, object>>? include = null,
+                                                    Func<IQueryable<User>, IIncludableQueryable<User, object>>? include = null,
                                                     bool asNoTracking = false);
 
         Task<PageList<User>> FindAllWitPaginationAsync(PagingParamsUserFilter pagingParams,
                                                         Func<IQueryable<User>, IIncludableQueryable<User, object>>? include = null);
     }
-
 }

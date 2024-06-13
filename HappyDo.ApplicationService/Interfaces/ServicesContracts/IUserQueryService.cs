@@ -11,8 +11,6 @@ namespace HappyDo.ApplicationService.Interfaces.ServicesContracts
 {
     public interface IUserQueryService
     {
-        Task<int> FindSupervisorDepartmentByApplicationUserIdAsync(Guid applicationUserId);
-        Task<bool> ExistingWorkerIdentifierAsync(string workerIdentifier, int? userId = null);
         Task<PageList<UserGridResponse>> FindAllUsersWithPaginationAsync(PagingParamsUserFilter pagingParams);
         Task<UserDataResponse?> FindByUserIdAsync(int userId);
     }

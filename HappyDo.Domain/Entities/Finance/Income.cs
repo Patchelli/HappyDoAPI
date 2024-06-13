@@ -1,24 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HappyDo.Domain.Entities.Categories;
-using HappyDo.Domain.Entities.Finance.Transaction;
+﻿using HappyDo.Domain.Entities.Categories;
 using HappyDo.Domain.Entities.UserScope;
+using HappyDo.Domain.Enums;
 
 namespace HappyDo.Domain.Entities.Finance
 {
-    public class Income : TransactionList
+    public class Income
     {
+        public Guid Id { get; set; }
         public Guid ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
         public Category Category { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime Date { get; set; }
+        public string Description { get; set; }
+        public ESituation Situation { get; set; }
 
-        public Income(Category category)
+        public Income()
         {
-            Category = category;
         }
     }
-
 }

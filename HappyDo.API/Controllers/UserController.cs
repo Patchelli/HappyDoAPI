@@ -73,7 +73,7 @@ namespace HappyDo.API.Controllers
             await _userQueryService.FindByUserIdAsync(userId);
 
 
-        [Authorize(Roles = $"{UserPolicy.Administrator}")]
+        [Authorize(Roles = $"{UserPolicy.Mentor}")]
         [HttpGet("get_all_users_with_pagination")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]

@@ -20,6 +20,7 @@ namespace HappyDo.ApplicationService.DataTransferObject.Requests.ApplicationUser
         public required string PostalCode { get; set; }
         public required string Country { get; set; }
         public EUserStatus UserStatus { get; set; }
+        public string Password { get; set; }
         public Guid RoleId { get; set; }
     }
 

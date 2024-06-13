@@ -12,25 +12,25 @@ namespace HappyDo.IoC
 {
     public static class DependencyInjectionHandler
     {
-        public static IServiceCollection AddDependencyInjectionHandler(this IServiceCollection services,
-            IConfiguration configuration)
+        public static void AddDependencyInjectionHandler(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<ApplicationContext>()
-                    .AddScoped<INotificationHandler, NotificationHandler>()
-                    .AddScoped<IUnitOfWork, UnitOfWork>();
 
-            services.AddDbContext<ApplicationContext>((serviceProv, options) =>
-                options.UseSqlServer(serviceProv.GetRequiredService<ConnectionStringOptions>().DefaultConnection,
-                                     sql => sql.CommandTimeout(180)));
+            services.AddProviderOptionsHandler(configuration);
+            services.AddScoped<ApplicationContext>();
+            services.AddScoped<INotificationHandler, NotificationHandler>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            services.AddEntityMappingDependencyInjection()
-                .AddRepositoryDependencyInjection()
-                .AddServiceDependencyInjection()
-                .AddValidationDependencyInjection()
-                .AddAuthenticationDependencyInjection(configuration)
-                ;
+            services.AddDbContext<ApplicationContext>((serviceProvider, options) =>
+                options.UseSqlServer(serviceProvider.GetRequiredService<ConnectionStringOptions>().DefaultConnection, sql => sql.CommandTimeout(180)));
 
-            return services;
+            services.AddEntityMapperDependencyInjection();
+            services.AddRepositoryDependencyInjection();
+            services.AddServiceDependencyInjection();
+            services.AddValidationDependencyInjection();
+            services.AddHttpClientDependencyInjection(configuration);
+            services.AddAuthenticationDependencyInjection(configuration);
+            services.AddIdentityDependencyInjection();
+            services.AddPaginationDependencyInjection();
         }
     }
 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HappyDo.Domain.Entities.UserRole
+namespace HappyDo.Domain.Entities.UserScope
 {
     public sealed class ApplicationRole : IdentityRole<Guid>
     {

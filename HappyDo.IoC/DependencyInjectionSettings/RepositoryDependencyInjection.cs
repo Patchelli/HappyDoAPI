@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HappyDo.Business.Interfaces.RepositoryContracts;
+using HappyDo.Infrastructure.Repository;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,11 @@ namespace HappyDo.IoC.DependencyInjectionSettings
     {
         public static IServiceCollection AddRepositoryDependencyInjection(this IServiceCollection services)
         {
+            services.AddScoped<IApplicationRoleRepository, ApplicationRoleRepository>();
+            services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+            services.AddScoped<IApplicationUserRoleRepository, ApplicationUserRoleRepository>();
+            services.AddScoped<IUserLoggerRepository, UserLoggerRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }

@@ -1,19 +1,21 @@
-﻿using HappyDo.Domain.Entities.Finance.Transaction;
-using HappyDo.Domain.Entities.UserRole;
+﻿using HappyDo.Domain.Entities.Categories;
 using HappyDo.Domain.Entities.UserScope;
 
 namespace HappyDo.Domain.Entities.Finance
 {
-    public class Leisure : OneTimeTransaction
+    public class Leisure
     {
+        public Guid Id { get; set; }
         public Guid ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
+        public Category Category { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime Date { get; set; }
+        public string Description { get; set; }
 
-        public Leisure(ApplicationUser responsible, string description, decimal amount, DateTime dateTime)
-            : base(description, amount, dateTime)
+        public Leisure()
         {
-            ApplicationUserId = responsible.Id;
-            ApplicationUser = responsible;
         }
+
     }
 }

@@ -8,31 +8,29 @@ using System.Threading.Tasks;
 
 namespace HappyDo.Infrastructure.Repository.Base
 {
-
     public abstract class BaseRepository<T> : IDisposable where T : class
     {
-        private readonly ApplicationContext _dbContext;
+        private readonly ApplicationContext _context;
+        protected DbSet<T> DbSet => _context.Set<T>();
 
-        protected BaseRepository(ApplicationContext dbContext)
+        protected BaseRepository(ApplicationContext context)
         {
-            _dbContext = dbContext;
+            _context = context;
         }
 
         public void Dispose()
         {
-            _dbContext.Dispose();
+            _context.Dispose();
             GC.SuppressFinalize(this);
         }
 
-        protected DbSet<T> DbSetContext => _dbContext.Set<T>();
-
-        protected async Task<bool> SaveInDatabaseAsync() =>
-            await _dbContext.SaveChangesAsync() > 0;
+        protected async Task<bool> SaveInDatabaseAsync() => await _context.SaveChangesAsync() > 0;
 
         protected void DetachedObject(T entity)
         {
-            if (_dbContext.Entry(entity).State == EntityState.Detached)
-                DbSetContext.Attach(entity);
+            if (_context.Entry(entity).State == EntityState.Detached)
+                DbSet.Attach(entity);
         }
     }
+
 }

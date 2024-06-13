@@ -1,4 +1,5 @@
-﻿using HappyDo.Domain.Entities.UserRole;
+﻿
+using HappyDo.Domain.Entities.Activities;
 using HappyDo.Domain.Enums;
 
 namespace HappyDo.Domain.Entities.UserScope
@@ -11,7 +12,7 @@ namespace HappyDo.Domain.Entities.UserScope
 
         public Guid ApplicationUserId { get; set; }
         public ApplicationUser? ApplicationUser { get; set; }
-        public List<Task> Tasks { get; set; } = new();
+        public List<Activity> Activities { get; set; } = new();
     }
 
 

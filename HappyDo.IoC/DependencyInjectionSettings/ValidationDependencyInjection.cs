@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HappyDo.Business.Handlers.ValidationSettings.EntityValidation;
+using HappyDo.Business.Interfaces.OthersContracts;
+using HappyDo.Domain.Entities.UserScope;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +12,10 @@ namespace HappyDo.IoC.DependencyInjectionSettings
 {
     public static class ValidationDependencyInjection
     {
-        public static IServiceCollection AddValidationDependencyInjection(this IServiceCollection services)
+        public static void AddValidationDependencyInjection(this IServiceCollection services)
         {
-            return services;
+            services.AddScoped<IValidate<ApplicationUser>, ApplicationUserValidation>();
+            services.AddScoped<IValidate<User>, UserValidation>();
         }
     }
 

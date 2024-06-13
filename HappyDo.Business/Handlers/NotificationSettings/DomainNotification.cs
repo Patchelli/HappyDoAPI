@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace HappyDo.Business.Handlers.NotificationSettings
 {
-    public sealed class DomainNotification
+    public class DomainNotification
     {
-        public string Key { get; init; }
-        public string Value { get; init; }
+        public string Key { get; set; }
+        public string Value { get; set; }
 
         public DomainNotification(string key, string value) =>
-             (Key, Value) = (key, value);
+            (Key, Value) = (key, value);
 
-        public static IEnumerable<DomainNotification> CreateNotifications(Dictionary<string, string> notifications)
+
+        public static IEnumerable<DomainNotification> Create(Dictionary<string, string> notifications)
         {
             foreach (var notification in notifications)
             {
@@ -22,5 +23,6 @@ namespace HappyDo.Business.Handlers.NotificationSettings
             }
         }
     }
+
 
 }

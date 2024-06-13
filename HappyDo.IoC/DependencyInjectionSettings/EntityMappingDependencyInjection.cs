@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AutoMapper;
+using HappyDo.ApplicationService.Interfaces.SpecializedMappingContracts;
+using HappyDo.ApplicationService.SpecializedMappings;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +10,14 @@ using System.Threading.Tasks;
 
 namespace HappyDo.IoC.DependencyInjectionSettings
 {
-    public static class EntityMappingDependencyInjection
+    public static class EntityMapperDependencyInjection
     {
-        public static IServiceCollection AddEntityMappingDependencyInjection(this IServiceCollection services)
+        public static void AddEntityMapperDependencyInjection(this IServiceCollection services)
         {
-
-            return services;
+            services.AddTransient<IApplicationUserMapper, ApplicationUserMapper>();
+            services.AddTransient<IUserMapper, UserMapper>();
         }
     }
+
 
 }

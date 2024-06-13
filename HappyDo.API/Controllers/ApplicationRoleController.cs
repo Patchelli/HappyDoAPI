@@ -19,7 +19,7 @@ namespace HappyDo.API.Controllers
             _applicationRoleQueryService = applicationRoleQueryService;
         }
 
-        [Authorize(Roles = UserPolicy.Administrator)]
+        [Authorize(Roles = UserPolicy.Mentor)]
         [HttpGet("get_all_roles")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
