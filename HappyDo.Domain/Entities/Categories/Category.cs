@@ -6,7 +6,7 @@ namespace HappyDo.Domain.Entities.Categories
     public class Category
     {
         [Key]
-        public Guid Id { get; set; }
+        public int CategoryId { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
 

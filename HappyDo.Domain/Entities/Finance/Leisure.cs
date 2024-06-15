@@ -5,10 +5,9 @@ namespace HappyDo.Domain.Entities.Finance
 {
     public class Leisure
     {
-        public Guid Id { get; set; }
+        public int LeisureId { get; set; }
         public Guid ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
-        public Category Category { get; set; }
         public decimal Amount { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }

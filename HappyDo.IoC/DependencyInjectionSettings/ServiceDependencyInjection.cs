@@ -1,6 +1,7 @@
 ﻿using HappyDo.ApplicationService.Interfaces.ServicesContracts;
 using HappyDo.ApplicationService.Services.ApplicationRoleServices;
 using HappyDo.ApplicationService.Services.AuthenticationServices;
+using HappyDo.ApplicationService.Services.ExpenseServices;
 using HappyDo.ApplicationService.Services.LoggersServices;
 using HappyDo.ApplicationService.Services.UserServices;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,6 +29,9 @@ namespace HappyDo.IoC.DependencyInjectionSettings
 
             services.AddScoped<IUserCommandService, UserCommandService>();
             services.AddScoped<IUserQueryService, UserQueryService>();
+
+            services.AddScoped<IExpenseCommandService, ExpenseCommandService>();
+            services.AddScoped<IExpenseQueryService, ExpenseQueryService>();
 
 
             return services;

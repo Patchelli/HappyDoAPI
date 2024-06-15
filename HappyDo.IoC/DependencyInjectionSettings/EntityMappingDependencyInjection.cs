@@ -16,6 +16,7 @@ namespace HappyDo.IoC.DependencyInjectionSettings
         {
             services.AddTransient<IApplicationUserMapper, ApplicationUserMapper>();
             services.AddTransient<IUserMapper, UserMapper>();
+            services.AddTransient<IExpenseMapper, ExpenseMapper>();
         }
     }
 

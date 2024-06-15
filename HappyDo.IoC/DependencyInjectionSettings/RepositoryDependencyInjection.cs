@@ -18,6 +18,7 @@ namespace HappyDo.IoC.DependencyInjectionSettings
             services.AddScoped<IApplicationUserRoleRepository, ApplicationUserRoleRepository>();
             services.AddScoped<IUserLoggerRepository, UserLoggerRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IExpenseRepository, ExpenseRepository>();
 
             return services;
         }

@@ -1,7 +1,6 @@
 ﻿using HappyDo.Business.Handlers.NotificationSettings;
 using HappyDo.Business.Handlers.PaginationSettings.PaginationFilters;
 using HappyDo.Business.Handlers.PaginationSettings;
-using HappyDo.Domain.Entities.UserScope;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using HappyDo.API.Settings.AuthorizationSettings;
