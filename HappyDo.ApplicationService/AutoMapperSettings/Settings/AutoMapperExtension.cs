@@ -11,5 +11,4 @@ namespace HappyDo.ApplicationService.AutoMapperSettings.Settings
         public static TDestination MapTo<TSource, TDestination>(this TSource source) =>
             AutoMapperFactoryConfiguration.Mapper!.Map<TSource, TDestination>(source);
     }
-
 }

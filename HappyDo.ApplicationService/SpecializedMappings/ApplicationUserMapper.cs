@@ -17,6 +17,7 @@ namespace HappyDo.ApplicationService.SpecializedMappings
             {
                 UserName = applicationUserRegisterRequest.UserLogin,
                 Email = applicationUserRegisterRequest.UserLogin,
+                DateOfBirth = applicationUserRegisterRequest.DateOfBirth,
                 PhoneNumber = applicationUserRegisterRequest.PhoneNumber,
                 CPF = applicationUserRegisterRequest.CPF,
                 EmailConfirmed = false,

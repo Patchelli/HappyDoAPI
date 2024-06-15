@@ -8,7 +8,7 @@ namespace HappyDo.Domain.Entities.Activities
     public class Activity
     {
         [Key]
-        public int Id { get; set; }
+        public int ActivityId { get; set; }
         public string Description { get; set; }
         public bool IsRoutine { get; set; }
         public decimal Percentage { get; set; }

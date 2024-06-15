@@ -1,5 +1,6 @@
 ﻿using HappyDo.Business.Handlers.ValidationSettings.EntityValidation;
 using HappyDo.Business.Interfaces.OthersContracts;
+using HappyDo.Domain.Entities.Finance;
 using HappyDo.Domain.Entities.UserScope;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -16,6 +17,7 @@ namespace HappyDo.IoC.DependencyInjectionSettings
         {
             services.AddScoped<IValidate<ApplicationUser>, ApplicationUserValidation>();
             services.AddScoped<IValidate<User>, UserValidation>();
+            services.AddScoped<IValidate<Expense>, ExpenseValidation>();
         }
     }
 

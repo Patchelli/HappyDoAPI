@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HappyDo.Business.Enums
 {
@@ -43,8 +39,46 @@ namespace HappyDo.Business.Enums
         InvalidValue,
 
         [Description("Cenário não configurado.")]
-        ErrorNotConfigured
+        ErrorNotConfigured,
+
+        // New descriptions
+        [Description("{0} deve ser menor ou igual a {1}.")]
+        LessOrEqual,
+
+        [Description("{0} deve ser maior ou igual a {1}.")]
+        GreaterOrEqual,
+
+        [Description("{0} não pode ser vazio.")]
+        NotEmpty,
+
+        [Description("{0} deve ser um número positivo.")]
+        PositiveNumber,
+
+        [Description("{0} deve ser um número negativo.")]
+        NegativeNumber,
+
+        [Description("{0} não pode conter caracteres especiais.")]
+        NoSpecialCharacters,
+
+        [Description("{0} não pode conter números.")]
+        NoNumbers,
+
+        [Description("{0} não pode conter letras.")]
+        NoLetters,
+
+        [Description("{0} não pode exceder {1} caracteres.")]
+        MaxLength,
+
+        [Description("{0} deve ter pelo menos {1} caracteres.")]
+        MinLength,
+
+        [Description("{0} já está em uso.")]
+        AlreadyInUse,
+
+        [Description("{0} não pode ser zero.")]
+        NotZero,
+
+        [Description("{0} inválido.")]
+        Invalid
     }
-
-
 }
